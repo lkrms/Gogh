@@ -233,7 +233,7 @@ convertNameAndRGBtoITerm() {
   set -- $(convertRGBtoMac "${color}")
   R=${1}; shift; G=${1}; shift; B=${1}; shift
 
-  echo "<key>${name}</key><dict><key>Blue Component</key><real>${B}</real><key>Green Component</key><real>${G}</real><key>Red Component</key><real>${R}</real></dict>"
+  echo "<key>${name}</key><dict><key>Alpha Component</key><real>1</real><key>Blue Component</key><real>${B}</real><key>Color Space</key><string>sRGB</string><key>Green Component</key><real>${G}</real><key>Red Component</key><real>${R}</real></dict>"
 }
 
 dset() {
@@ -656,7 +656,7 @@ apply_darwin() {
   COLOR_16=$(convertNameAndRGBtoITerm "Ansi 15 Color"            "$COLOR_16")
 
   # Assemble color scheme file contents
-  ITERMCOLORS='<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict>'${BACKGROUND_COLOR}${FOREGROUND_COLOR}${COLOR_01}${COLOR_02}${COLOR_03}${COLOR_04}${COLOR_05}${COLOR_06}${COLOR_07}${COLOR_08}${COLOR_09}${COLOR_10}${COLOR_11}${COLOR_12}${COLOR_13}${COLOR_14}${COLOR_15}'</dict></plist>'
+  ITERMCOLORS='<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict>'${BACKGROUND_COLOR}${FOREGROUND_COLOR}${COLOR_01}${COLOR_02}${COLOR_03}${COLOR_04}${COLOR_05}${COLOR_06}${COLOR_07}${COLOR_08}${COLOR_09}${COLOR_10}${COLOR_11}${COLOR_12}${COLOR_13}${COLOR_14}${COLOR_15}${COLOR_16}'</dict></plist>'
 
   # Dump iTerm color scheme to file and import it by opening it
   echo "${ITERMCOLORS}" > "${PROFILE_NAME}.itermcolors"
