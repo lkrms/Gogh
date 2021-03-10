@@ -11,7 +11,7 @@ export COLOR_06="#D0D0FF"           # Magenta (Syntax var)
 export COLOR_07="#6E9CBE"           # Cyan (Prompt)
 export COLOR_08="#FFFFFF"           # White
 
-export COLOR_09="#323232"           # Bright Black
+export COLOR_09="#7B7B7B"           # Bright Black
 export COLOR_10="#FF7B6B"           # Bright Red (Command error)
 export COLOR_11="#83D182"           # Bright Green (Exec)
 export COLOR_12="#FFFF7C"           # Bright Yellow
