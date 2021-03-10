@@ -10,7 +10,7 @@ export COLOR_06="#d0d0ff"           # SYNTAX_VAR
 export COLOR_07="#6e9cbe"           # PROMP
 export COLOR_08="#ffffff"           #
 
-export COLOR_09="#323232"           #
+export COLOR_09="#7b7b7b"           #
 export COLOR_10="#ff7b6b"           # COMMAND_ERROR
 export COLOR_11="#83d182"           # EXEC
 export COLOR_12="#ffff7c"           #
